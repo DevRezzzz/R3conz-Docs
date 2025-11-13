@@ -8,7 +8,7 @@
     "dark": "#020712"
   },
   "logo": {
-    "src": "/logo.svg",
+    "src": "public/logo.svg",
     "href": "https://reconz.xyz"
   },
   "topbarLinks": [
