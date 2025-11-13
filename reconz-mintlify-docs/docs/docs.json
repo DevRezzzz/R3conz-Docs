@@ -33,20 +33,24 @@
       {
         "group": "Getting started",
         "pages": [
-          "getting-started"
+          "getting-started",
+          "installation"
         ]
       },
       {
         "group": "Core concepts",
         "pages": [
           "concepts/core-intelligence",
+          "concepts/workflows",
           "concepts/token-rcnz"
         ]
       },
       {
         "group": "Guides",
         "pages": [
-          "guides/run-first-scan"
+          "guides/run-first-scan",
+          "guides/investigate-exploit",
+          "guides/payai-integration"
         ]
       }
     ]

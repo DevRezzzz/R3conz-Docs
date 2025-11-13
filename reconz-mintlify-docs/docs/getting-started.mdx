@@ -31,10 +31,13 @@ At minimum, you’ll configure:
 - **RPC / archival endpoints** (your own or third-party)
 - Optional: **internal logs** or **SIEM feeds** for extra context
 
-Go to **Settings → Data sources** and:
+<Callout type="info">
+ReconZ is designed to be chain-agnostic and can expand across new networks without rebuilding your workflows.
+</Callout>
 
-1. Add your primary chains and endpoints.  
-2. Test connectivity to make sure ReconZ can pull historical and real-time data.
+1. Go to **Settings → Data sources**.  
+2. Add your primary chains and endpoints.  
+3. Test connectivity to make sure ReconZ can pull historical and real-time data.
 
 ## 3. Configure x402 / billing
 
@@ -43,7 +46,7 @@ ReconZ is **x402-native**, so every scan and forensic query is represented as a 
 You’ll typically choose one of two paths:
 
 - **Direct RCNZ settlement**  
-  Fund your workspace with RCNZ. Each scan consumes a small amount of token proportional to complexity and data usage.
+  Fund your workspace with RCNZ. Each scan burns a small amount of token proportional to complexity and data usage.
 
 - **x402 routing (PayAI)**  
   Use your existing x402 merchant / agent configuration to route payments between your agents and ReconZ.
@@ -84,6 +87,8 @@ ReconZ will:
   - **Ranked freeze targets**  
   - A **timeline** of events
 
+See **Guides → Run your first scan** for a more detailed walkthrough.
+
 ## 5. Export an evidence pack
 
 Every completed scan can be turned into a **PDF evidence pack** suitable for:
@@ -111,5 +116,5 @@ ReconZ will generate a PDF containing:
 ## Where to go next
 
 - Learn how ReconZ thinks in **Core concepts → Core intelligence**  
-- Follow an end-to-end example in **Guides → Run your first scan**  
+- Follow an end-to-end example in **Guides → Investigate an exploit**  
 - Explore integration patterns with x402 in **Guides → PayAI / x402 integration**
