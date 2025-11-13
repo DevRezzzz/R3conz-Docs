@@ -10,20 +10,20 @@
   "logo": {
     "light": "public/logo.svg",
     "dark": "public/logo.svg",
-    "href": "https://reconz.xyz"
+    "href": "https://r3conz.mintlify.app/"
   },
   "topbarLinks": [
     {
       "name": "Website",
-      "url": "https://reconz.xyz"
+      "url": "https://r3conz.com/"
     },
     {
       "name": "Discord",
-      "url": "https://discord.gg/your-invite-here"
+      "url": "https://discord.gg/r3conz"
     },
     {
       "name": "X (Twitter)",
-      "url": "https://x.com/r3conz"
+      "url": "https://x.com/r3conZ_"
     }
   ],
   "navigation": {
