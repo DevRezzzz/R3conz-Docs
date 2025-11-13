@@ -1,0 +1,99 @@
+---
+title: "Run your first scan"
+description: "From tx hash to ranked freeze targets using ReconZ."
+---
+
+# Run your first scan
+
+This guide walks you through an end-to-end example:
+
+1. Start from a suspicious transaction hash  
+2. Configure a ReconZ scan  
+3. Interpret the results  
+4. Export an evidence pack
+
+## 1. Choose a starting point
+
+You’ll need at least one of:
+
+- A **transaction hash** you suspect is malicious  
+- A **wallet address** associated with suspicious activity  
+- A **set of tx hashes** from your own monitoring stack
+
+For this example, we’ll start with a single tx hash on Ethereum.
+
+## 2. Create a new scan
+
+1. Open the ReconZ dashboard.  
+2. Click **New scan**.  
+3. Select **Transaction** as the scan type.  
+4. Paste in the suspicious tx hash.  
+5. Choose:
+   - **Primary chain:** Ethereum  
+   - **Scan depth:** 3–5 hops  
+   - **Time window:** last 24–72 hours (depending on context)
+
+Then click **Run scan**.
+
+Behind the scenes, ReconZ will:
+
+- Fetch transaction details and related state  
+- Run the **Exploit Detection Engine** to simulate attacker paths  
+- Use the **Forensics Suite** to trace flows and cluster addresses
+
+## 3. Interpret the results
+
+When the scan finishes, you’ll see:
+
+- **Risk score** – how likely it is to be an exploit  
+- **Key entities** – contracts, addresses, and services involved  
+- **Hop graph** – how funds move over time
+
+Pay attention to:
+
+- Sudden fan-out of small transfers to many new wallets  
+- Bridging to other chains followed by DEX swaps  
+- Interaction with known mixer contracts or high-risk venues
+
+## 4. Ranked freeze targets
+
+In the **Freeze targets** section, ReconZ will surface:
+
+- **Top recommended addresses** (usually centralized choke points)  
+- For each target:
+  - Rationale (why it’s ranked)  
+  - Volume and asset breakdown  
+  - Links to raw on-chain data
+
+These are designed to be shared with:
+
+- Exchanges  
+- Market makers  
+- Custody providers  
+- Internal risk teams
+
+## 5. Export an evidence pack
+
+1. Click **Export evidence pack** at the top right of the scan results.  
+2. Configure:
+   - **Redactions** (if needed)  
+   - **Time zone**  
+   - **Custom notes** (e.g. internal ticket IDs)
+
+ReconZ will generate a PDF containing:
+
+- Executive summary  
+- Full timeline of actions  
+- Entity clusters and freeze targets  
+- Indicators of compromise (IOCs)  
+- Audit log of the scan
+
+You can attach this directly to support tickets, legal requests, or internal incident reports.
+
+## 6. Automate the flow
+
+After you’re comfortable with manual scans, you can:
+
+- Push suspicious hashes from your alerting system into ReconZ  
+- Use x402 to let your **own agents** request and pay for scans automatically  
+- Configure thresholds so only high-severity alerts are escalated for human review

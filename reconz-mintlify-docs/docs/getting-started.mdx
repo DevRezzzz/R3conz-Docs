@@ -1,0 +1,115 @@
+---
+title: "Getting started"
+description: "Set up ReconZ, connect your first chain, and run an initial exploit scan."
+---
+
+# Getting started
+
+This guide walks you through:
+
+1. Creating a ReconZ workspace  
+2. Connecting your first chain(s)  
+3. Running a basic scan from a transaction hash  
+4. Exporting an evidence pack
+
+> This is written for a typical **protocol, exchange, or market maker** integration. If you’re a security researcher or solo analyst, you can follow the same steps.
+
+## 1. Create a workspace
+
+1. Sign in to the ReconZ dashboard.  
+2. Create a new **Workspace** for your project (e.g. `Acme Protocol` or `XYZ Exchange`).  
+3. Invite teammates with appropriate roles:
+   - **Admin** – billing, integrations, workspace configuration  
+   - **Analyst** – run scans, view evidence packs  
+   - **Viewer** – read-only access to reports
+
+## 2. Connect data sources
+
+At minimum, you’ll configure:
+
+- **Primary chains** (e.g. Ethereum, Solana, BNB Chain, etc.)
+- **RPC / archival endpoints** (your own or third-party)
+- Optional: **internal logs** or **SIEM feeds** for extra context
+
+Go to **Settings → Data sources** and:
+
+1. Add your primary chains and endpoints.  
+2. Test connectivity to make sure ReconZ can pull historical and real-time data.
+
+## 3. Configure x402 / billing
+
+ReconZ is **x402-native**, so every scan and forensic query is represented as a **pay-per-use transaction**.
+
+You’ll typically choose one of two paths:
+
+- **Direct RCNZ settlement**  
+  Fund your workspace with RCNZ. Each scan consumes a small amount of token proportional to complexity and data usage.
+
+- **x402 routing (PayAI)**  
+  Use your existing x402 merchant / agent configuration to route payments between your agents and ReconZ.
+
+In the dashboard:
+
+1. Go to **Settings → Billing & x402**.  
+2. Link your **x402 merchant ID** or **fund RCNZ balance**.  
+3. Set **usage limits** and **alert thresholds**.
+
+## 4. Run your first scan
+
+Once your workspace is configured, you can run a basic scan from either:
+
+- A **transaction hash**
+- A **wallet address**
+- A **set of related transactions**
+
+From the dashboard:
+
+1. Click **New scan**.  
+2. Choose the scan type (`Transaction`, `Address`, or `Bulk`).  
+3. Paste a tx hash or address.  
+4. Select:
+   - Chain(s) to trace across  
+   - Time window  
+   - Scan depth (e.g. number of hops)
+
+Click **Run scan**.
+
+ReconZ will:
+
+- Fetch the relevant on-chain data  
+- Simulate potential exploit paths via the **Exploit Detection Engine**  
+- Cluster related addresses via the **Forensics Suite**  
+- Produce:
+  - A **risk score**  
+  - **Ranked freeze targets**  
+  - A **timeline** of events
+
+## 5. Export an evidence pack
+
+Every completed scan can be turned into a **PDF evidence pack** suitable for:
+
+- Exchanges and market makers  
+- Internal risk teams  
+- Legal / law enforcement
+
+From the scan results:
+
+1. Click **Export evidence pack**.  
+2. Choose:
+   - Redaction level  
+   - Time zone formatting  
+   - Optional notes section
+
+ReconZ will generate a PDF containing:
+
+- Executive summary  
+- Detailed timeline  
+- Address clusters & freeze targets  
+- Indicators of compromise (IOCs)  
+- Audit log of the scan configuration
+
+## Where to go next
+
+- Learn how ReconZ thinks in **Core concepts → Core intelligence**  
+- Follow an end-to-end example in **Guides → Run your first scan**  
+- Explore integration patterns with x402 in **Guides → PayAI / x402 integration**

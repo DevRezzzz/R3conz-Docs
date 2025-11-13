@@ -1,0 +1,85 @@
+---
+title: "Core intelligence"
+description: "How the Neural Intelligence System, Exploit Detection Engine, and Forensics Suite work together."
+---
+
+# Core intelligence
+
+ReconZ is built on three core intelligence modules:
+
+- **Neural Intelligence System**
+- **Exploit Detection Engine**
+- **Forensics Suite**
+
+Together, they form a feedback loop that can both **detect** threats early and **reconstruct** what happened once an exploit is underway.
+
+## Neural Intelligence System
+
+The **Neural Intelligence System** is ReconZ’s always-on anomaly detector.
+
+It:
+
+- Ingests **real-time on-chain activity** across multiple networks  
+- Learns patterns of “normal” behavior for:
+  - Token flows
+  - DEX / CEX activity
+  - Bridge usage
+- Flags deviations that match known exploit tactics (or novel but suspicious patterns)
+
+Outputs:
+
+- **Signals** that something is off (e.g. sudden burst of small splitter transactions)
+- **Context** around the entities involved
+- **Priority scores** to help you decide what to investigate first
+
+## Exploit Detection Engine
+
+The **Exploit Detection Engine** is the “attacker simulator”.
+
+Given a starting point (like a tx hash), it:
+
+- Simulates **likely attacker paths** across chains and protocols  
+- Scores combinations of hops, swaps, and bridges based on:
+  - Known exploit patterns
+  - Liquidity and slippage
+  - Historical attacker behavior
+- Identifies **bottlenecks** and **choke points** where freezing funds is most effective
+
+Outputs:
+
+- **Exploit likelihood score**  
+- **Ranked freeze targets** (addresses, contracts, or venues)  
+- **What-if scenarios** for different response strategies
+
+## Forensics Suite
+
+The **Forensics Suite** turns raw traces into a **narrative**.
+
+Starting from one or more hashes, it:
+
+- **Traces** funds across multiple chains and services  
+- **Clusters** addresses based on shared funding, co-spend patterns, or behavioral fingerprints  
+- **Builds timelines** of attacker actions, including:
+  - Initial compromise
+  - Laundering steps
+  - Final cash-out points
+
+Outputs:
+
+- Interactive graph views (inside ReconZ)
+- Human-readable **timelines**
+- Exportable **PDF evidence packs**
+
+## How they work together
+
+A typical flow:
+
+1. **Neural Intelligence System** flags anomalous activity.  
+2. **Exploit Detection Engine** simulates attacker paths and highlights likely exploits.  
+3. **Forensics Suite** reconstructs what actually happened and packages the results.
+
+This loop enables:
+
+- **Early detection**, before everything is drained  
+- **Rapid attribution**, when you’re under time pressure  
+- **Defensible decisions**, backed by transparent evidence

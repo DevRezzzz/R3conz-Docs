@@ -1,0 +1,62 @@
+---
+title: "RCNZ token"
+description: "How the RCNZ token powers ReconZ usage and demand."
+---
+
+# RCNZ token
+
+The **RCNZ** token powers usage across the ReconZ ecosystem.
+
+Unlike purely speculative tokens, RCNZ is tied directly to **work done** on-chain:
+
+- **Every scan**
+- **Every forensic query**
+- **Every enriched data request**
+
+…consumes RCNZ under the hood.
+
+## Utility
+
+RCNZ is used to:
+
+- Pay for **exploit scans** and **forensic investigations**  
+- Access higher **rate limits** and **priority processing**  
+- Unlock **advanced features** such as:
+  - Bulk scanning
+  - Historical backfills
+  - Custom alert pipelines
+
+## Consumption model
+
+When a workspace runs actions that incur cost:
+
+1. ReconZ calculates the **compute + data** footprint of the job.  
+2. The equivalent amount of RCNZ is **charged** to the workspace balance.  
+3. A portion of the token used can be:
+   - **Burned** (permanently removed from supply), and/or  
+   - **Routed** to protocol-owned liquidity / treasury, depending on the final token model.
+
+This creates a feedback loop where:
+
+- More **security demand** → more **RCNZ consumption**  
+- More activity on ReconZ → stronger **on-chain usage** data for RCNZ
+
+## Paying via x402
+
+If your stack already uses **x402**:
+
+- ReconZ can appear as a **service endpoint** within your existing payment graph.  
+- Your agents can request scans and settle usage in **RCNZ** or **other supported assets**, routed via x402.
+
+## Access tiers (example)
+
+You can expose pricing & limits transparently in your product around tiers like:
+
+- **Sandbox** – low limits, ideal for testing  
+- **Operations** – for live protocol / exchange usage  
+- **Enterprise** – high-volume, custom SLA, dedicated support
+
+Each tier maps to:
+
+- Monthly or pay-per-use commitments  
+- Different RCNZ and/or x402 settlement preferences

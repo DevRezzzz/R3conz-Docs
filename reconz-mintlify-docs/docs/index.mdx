@@ -1,0 +1,80 @@
+---
+title: "Overview"
+description: "ReconZ is an x402-native AI intelligence layer automating on-chain investigations and exploit detection across every blockchain network."
+---
+
+# ReconZ
+
+ReconZ is an **x402-native AI intelligence layer** that automates on-chain investigations and exploit detection across every blockchain network.
+
+Instead of manually stitching together block explorers, chain analytics, and spreadsheets, ReconZ turns raw blockchain activity into **actionable threat intelligence**: ranked freeze targets, exploit timelines, and exportable evidence packs.
+
+## What ReconZ does
+
+ReconZ focuses on three core problems:
+
+- **Early exploit detection**  
+  Simulate real attack vectors across multiple chains and detect anomalies *before* they spread.
+
+- **Rapid attribution**  
+  Cluster related wallets, follow cross-chain hops, and surface the most likely freeze targets.
+
+- **Evidence packaging**  
+  Export a clean, human-readable PDF pack with timelines, indicators of compromise (IOCs), and an audit log of the investigation.
+
+## Core intelligence stack
+
+ReconZ is built around three primary components:
+
+- **Neural Intelligence System**  
+  Continuously monitors on-chain activity and flags anomalies correlated with known exploit patterns.
+
+- **Exploit Detection Engine**  
+  Simulates attacker behavior across chains, stress tests transaction paths, and scores potential exploits.
+
+- **Forensics Suite**  
+  Reconstructs entire exploit flows from a single transaction hash (or set of hashes) and outputs clusters, timelines, and ranked targets.
+
+You can learn more about each subsystem in **Core concepts → Core intelligence**.
+
+## Built on x402 (PayAI)
+
+ReconZ is **x402-native**. That means:
+
+- Every scan and forensic query is treated as a **pay-per-use API transaction**.
+- Requests are routed and settled via **x402**, PayAI’s backbone for agent-to-agent payments.
+- You can plug ReconZ into your own agents and workflows using the same x402 rails.
+
+See **Guides → PayAI / x402 integration** for integration patterns.
+
+## RCNZ token utility
+
+ReconZ is powered by the **RCNZ** token:
+
+- Each **scan**, **forensic query**, and **data request** in the ReconZ ecosystem *consumes* RCNZ.
+- As usage grows, on-chain demand for RCNZ scales with the Web3 security market itself.
+- Platforms can integrate ReconZ at the API level and settle usage in RCNZ directly or via x402.
+
+Details live in **Core concepts → RCNZ token**.
+
+## Who is ReconZ for?
+
+- **Founders & protocol teams**  
+  Get real-time exploit monitoring and ready-to-send evidence packs for exchanges, market makers, and law enforcement.
+
+- **Exchanges & market makers**  
+  Prioritize which addresses to freeze first and justify those actions with transparent, exportable evidence.
+
+- **Security researchers & analysts**  
+  Use ReconZ as an “autonomous co-analyst” that handles the repetitive tracing and clustering, while you focus on edge cases and narrative.
+
+## Next steps
+
+<Cards cols={2}>
+  <Card href="/getting-started" title="Get started">
+    Create your first workspace and run a scan from a transaction hash.
+  </Card>
+  <Card href="/guides/run-first-scan" title="Run your first exploit scan">
+    Step-by-step guide to go from tx hash to ranked freeze targets.
+  </Card>
+</Cards>
